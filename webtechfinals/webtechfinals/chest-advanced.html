@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="file:///A:/1737549644530hwxanyzb/1737549529_dea54f41249f4397bec02aca2187d34c.svg">
+    <link rel="short icon" type="x-icon" href="https://th.bing.com/th/id/OIP.f6kViSM9__Zo_hlux7rAeAAAAA?rs=1&pid=ImgDetMain">
+    <title>Chest Workout Plan: advanced</title>
+    <link rel="stylesheet" href="chest-advanced.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+ <header>
+    <nav class="top">
+        <a href="homepage.html"><div class="logo">FitQuest</div></a>
+        <ul class="nav-links">
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="2ndpage.html">Quests</a></li>
+            <li><a href="challenges.html">Challenges</a></li>
+            <li><a href="rewards.html">Rewards</a></li>
+            <li><a href="#community">Community</a></li>
+            <li><a href="#signup" class="btn">Sign Up</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="points-container">
+    <p>Total Points: <span id="points">0</span></p>
+</div>
+    <section class="workout-section">
+        <h1>Advanced Chest Workout Plan</h1>
+        <p>Choose one exercise to follow by clicking to start your progress.</p>
+
+        <div class="exercise">
+            <a href="chest-advanced1.html"><img class="gif" src="barbellhooklyingbenchpress.gif" alt="Push-Up"></a>
+            <p class="exercise-label">Barbell Hooklying Bench Press</p>
+            <p class="exercise-description">The barbell hooklying bench press is a bench press variation performed with a barbell while keeping the knees bent and feet flat on the bench, enhancing core activation and stability while targeting the chest, shoulders, and triceps.(50pts after turn in)</p>
+        </div>
+        
+        <div class="exercise">
+            <a href="chest-advanced2.html"><img class="gif" src="gilbenchpress.gif" alt="Inclined Push-Up"></a>
+            <p class="exercise-label">Guillotine Bench Press</p>
+            <p class="exercise-description">The **guillotine bench press** is a chest-focused exercise where the barbell is lowered to the neck instead of the chest, emphasizing the upper chest but requiring strict control to avoid injury.(45pts after turn in)</p>
+        </div>
+        
+        <div class="exercise">
+            <a href="chest-advanced3.html"><img class="gif" src="explosivepushup.gif" alt="Declined Push-Up"></a></a>
+            <p class="exercise-label">Explosive Push-ups</p>
+            <p class="exercise-description">The explosive push-up is a dynamic bodyweight exercise where you push off the ground with enough force for your hands to leave the surface, building upper body power and strength. (45 pts after turn in)</p>
+        </div>
+        
+    </section>
+    <script>
+        
+        let points = parseInt(localStorage.getItem("points")) || 0; // Load saved points
+    const pointsDisplay = document.getElementById("points");
+
+    pointsDisplay.textContent = points; // Update points display
+    function gainPoints(amount) {
+    points += amount;
+    localStorage.setItem("points", points); // Save updated points
+    document.getElementById("points").textContent = points;
+
+    checkRewards(points); // Check for badge rewards when points change
+}
+
+function checkRewards(points) {
+    if (points >= 50 && points < 100) {
+        alert("🎉 Congratulations! You've unlocked the Bronze Badge!");
+        document.getElementById("reward-message").textContent = "🏅 Bronze Badge Unlocked!";
+    } else if (points >= 100 && points < 200) {
+        alert("🏆 Amazing! You've earned the Silver Badge!");
+        document.getElementById("reward-message").textContent = "🥈 Silver Badge Unlocked!";
+    } else if (points >= 200) {
+        alert("🥇 Incredible! You've achieved the Gold Badge!");
+        document.getElementById("reward-message").textContent = "🥇 Gold Badge Unlocked!";
+    }
+}
+
+
+        </script>
+        <div id="reward-message"></div>
+    <footer>
+        <p>&copy; 2025 FitQuest. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

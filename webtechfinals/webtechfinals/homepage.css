@@ -1,0 +1,198 @@
+/* styles.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Navigation Bar */
+header {
+    background: #70ff33;
+    color: white;
+    padding: 15px 0;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+
+}
+.logo {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Times New Roman';
+    color:rgb(255, 255, 255);
+    -webkit-text-stroke: 1px black;
+    text-decoration: underline;
+
+}
+.featurespics {
+    height: 500px;
+    width: 330px;
+    border-radius: 40px;
+    margin-right: 35px;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 20px;
+}
+.nav-links li a:hover {
+    color: yellow;
+    background-color: green;
+    padding: 10px;
+    border-radius: 5%;
+    font-size: 25px;
+}
+.nav-links .btn {
+    border: 2px solid #000000;  
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://i.pinimg.com/1200x/e7/a2/10/e7a210bf9ee83e27bd6823924ab27836.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 20px;
+}
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+}
+.hero p {
+    color: rgb(255, 255, 255);
+}
+.hero .btn {
+    background: #70ff33;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Sections */
+section {
+    padding: 50px 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+.howitworks {
+    background: linear-gradient(to bottom, #70ff33, #ffffff);
+}
+.how-it-works .steps {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.step {
+    background: #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+.features h3 {
+    display: inline-flex;   
+    margin-left: 46px;
+    position: relative;
+    right: 43px;
+    bottom: 100px;
+    border-radius: 20%;
+    background-color: #4e4e4e7c;
+    padding: 8px;
+    color: white;
+}
+#experience:hover {
+    font-size: 0px;
+    position: relative;
+    bottom: 250px;
+    margin-right: 15px;
+}
+#experience:hover:after {
+    content: attr(data-hover);
+    font-size: 20.8px;
+    width: 200px;
+    position: relative;
+
+}
+#workouts:hover {
+    font-size: 0px;
+    position: relative;
+    bottom: 250px;
+    margin-right: 15px;
+}
+#workouts:hover:after {
+    content: attr(data-hover1);
+    font-size: 20.8px;
+    width: 223px;
+    position: relative;
+    
+
+}
+#social:hover {
+    font-size: 0px;
+    position: relative;
+    bottom: 230px;
+    margin-left: 30 px;
+}
+#social:hover:after {
+    content: attr(data-hover2);
+    font-size: 20.8px;
+    width: 223px;
+    position: relative;
+}
+#progress:hover {
+    font-size: 0px;
+    position: relative;
+    bottom: 210px;
+    margin-left: 30 px;
+}
+#progress:hover:after {
+    content: attr(data-hover3);
+    font-size: 20.8px;
+    width: 223px;
+    position: relative;
+}
+#reward:hover {
+    font-size: 0px;
+    position: relative;
+    bottom: 230px;
+    margin-left: 30 px;
+}
+#reward:hover:after {
+    content: attr(data-hover4);
+    font-size: 20.8px;
+    width: 223px;
+    position: relative;
+}
+@media screen and (min-width: 943px){
+    .featurespics {
+        height: 400px;
+        width: 250px;
+        border-radius: 40px;
+        margin-right: 35px;}
+}

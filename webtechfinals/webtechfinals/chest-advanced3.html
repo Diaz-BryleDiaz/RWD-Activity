@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="file:///A:/1737549644530hwxanyzb/1737549529_dea54f41249f4397bec02aca2187d34c.svg">
+    <link rel="short icon" type="x-icon" href="https://th.bing.com/th/id/OIP.f6kViSM9__Zo_hlux7rAeAAAAA?rs=1&pid=ImgDetMain">
+    <title>FitQuest</title>
+    <link rel="stylesheet" href="chest-advanced3.css">
+    <script src="script.js"></script>
+</head>
+<body>
+ <!-- Navigation Bar -->
+ <header>
+    <nav class="top">
+        <a href="homepage.html"><div class="logo">FitQuest</div></a>
+        <ul class="nav-links">
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="2ndpage.html">Quests</a></li>
+            <li><a href="challenges.html">Challenges</a></li>
+            <li><a href="rewards.html">Rewards</a></li>
+            <li><a href="#community">Community</a></li>
+            <li><a href="#signup" class="btn">Sign Up</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="points-container">
+    <p>Total Points: <span id="points">0</span></p>
+</div>
+<br>
+<br><br><br>
+<div class="exercise">
+    <h1>You may now begin your exercise (Explosive Push-ups)</h1>
+    <img class="gif" src="explosivepushup.gif" alt="Push-Up">
+    <ol class="howto">
+        <li class="text">Start in a standard push-up position with your hands shoulder-width apart and your body in a straight line from head to heels.</li>
+        <li class="text">Lower your chest towards the ground by bending your elbows, keeping your core engaged and maintaining a straight body line.</li>
+        <li class="text">Explosively push through your hands to lift your body off the ground, allowing your hands to leave the floor.</li>
+        <li class="text">As you land, soften the impact by bending your elbows and immediately transition into the next repetition.</li>
+    </ol>
+</div>
+<button class="turn-btn" data-points="45" onclick="handleTurnClick(this)">Turn-in</button>
+<div id="reward-message"></div>
+<footer>
+    <p>&copy; 2025 FitQuest. All Rights Reserved.</p>
+</footer>
+<script>
+let points = parseInt(localStorage.getItem("points")) || 0; // Load saved points
+
+document.addEventListener("DOMContentLoaded", function () {
+    const turnBtn = document.querySelector(".turn-btn");
+    const pointsDisplay = document.getElementById("points");
+
+    pointsDisplay.textContent = points; // Update points display
+
+    // Disable button initially
+    turnBtn.textContent = "Be true to yourself";
+    turnBtn.disabled = true;
+
+    // Enable button after 30 seconds
+    setTimeout(() => {
+        turnBtn.disabled = false;
+        turnBtn.textContent = "Done already??";
+    }, 30000);
+});
+
+// Function to handle Turn button click (disables permanently after 1 click)
+function handleTurnClick(button) {
+    let amount = parseInt(button.getAttribute("data-points"));
+    gainPoints(amount);
+
+    // Disable button permanently after clicking once
+    button.disabled = true;
+    button.textContent = "Done!";
+}
+
+// Function to update points and store them in localStorage
+function gainPoints(amount) {
+    points += amount;
+    localStorage.setItem("points", points); // Save updated points
+    document.getElementById("points").textContent = points;
+
+    checkRewards(points); // Check for badge rewards when points change
+}
+
+function checkRewards(points) {
+    if (points >= 50 && points < 100) {
+        alert("🎉 Congratulations! You've unlocked the Bronze Badge!");
+        document.getElementById("reward-message").textContent = "🏅 Bronze Badge Unlocked!";
+    } else if (points >= 100 && points < 200) {
+        alert("🏆 Amazing! You've earned the Silver Badge!");
+        document.getElementById("reward-message").textContent = "🥈 Silver Badge Unlocked!";
+    } else if (points >= 200) {
+        alert("🥇 Incredible! You've achieved the Gold Badge!");
+        document.getElementById("reward-message").textContent = "🥇 Gold Badge Unlocked!";
+    }
+}
+</script>
+</body>

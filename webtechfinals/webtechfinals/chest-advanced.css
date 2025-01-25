@@ -1,0 +1,152 @@
+/* Quest Selection Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: #f4f4f4;
+}
+/* Navigation Bar */
+header {
+    background: #70ff33;
+    color: white;
+    padding: 15px 0;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+
+}
+.logo {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Times New Roman';
+    color:rgb(255, 255, 255);
+    -webkit-text-stroke: 1px black;
+    text-decoration: underline;
+
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 20px;
+}
+.nav-links li a:hover {
+    color: yellow;
+    background-color: green;
+    padding: 10px;
+    border-radius: 5%;
+    font-size: 25px;
+}
+.nav-links .btn {
+    border: 2px solid #000000;  
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    
+}
+
+/* Workout Section */
+.workout-section {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 800px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.workout-section h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.workout-section p {
+    font-size: 20px;
+    color: #555;
+}
+
+/* Exercise Container */
+.exercises {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.exercise {
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+    position: relative;
+}
+
+.gif {
+    width: 380px;
+    height: 300px;
+    transition: transform 0.3s ease; /* Smooth effect when hovering */
+}
+
+.gif:hover {
+    transform: scale(1.1); /* Slightly enlarges GIF when hovered */
+}
+
+.exercise-label {
+    font-size: 24px;
+    font-weight: bold;
+    color: #222;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+/* Initially hide the description */
+.exercise-description {
+    display: none;
+    font-size: 18px;
+    color: #555;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    width: 350px;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Show description when hovering over GIF */
+.exercise:hover .exercise-description {
+    display: block;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 30p
+}
+.points-container {
+    font-size: 22px;
+    margin-top: 20px;
+    font-weight: bold;
+    background: #222;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}

@@ -1,0 +1,93 @@
+/* Quest Selection Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: #f4f4f4;
+}
+/* Navigation Bar */
+header {
+    background: #70ff33;
+    color: white;
+    padding: 15px 0;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+
+}
+.logo {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Times New Roman';
+    color:rgb(255, 255, 255);
+    -webkit-text-stroke: 1px black;
+    text-decoration: underline;
+
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 20px;
+}
+.nav-links li a:hover {
+    color: yellow;
+    background-color: green;
+    padding: 10px;
+    border-radius: 5%;
+    font-size: 25px;
+}
+.nav-links .btn {
+    border: 2px solid #000000;  
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    
+}
+footer {
+    background: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+.howto {
+    text-align: left;
+}
+.text {
+    padding: 20px;
+    font-size: 30px;
+    font-family: 'Times New Roman';
+}
+.gif {
+    width: 600px;
+    height: 400px;
+}
+.points-container {
+    font-size: 22px;
+    margin-top: 20px;
+    font-weight: bold;
+    background: #222;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.turn-btn:disabled {
+    background: #70ff33;
+    font-size: large;
+    cursor: not-allowed;
+}
+

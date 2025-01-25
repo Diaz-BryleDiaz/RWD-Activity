@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="file:///A:/1737549644530hwxanyzb/1737549529_dea54f41249f4397bec02aca2187d34c.svg">
+    <link rel="short icon" type="x-icon" href="https://th.bing.com/th/id/OIP.f6kViSM9__Zo_hlux7rAeAAAAA?rs=1&pid=ImgDetMain">
+    <title>Chest Workout Plan: Intermediate</title>
+    <link rel="stylesheet" href="chest-intermediate.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+ <header>
+    <nav class="top">
+        <a href="homepage.html"><div class="logo">FitQuest</div></a>
+        <ul class="nav-links">
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="2ndpage.html">Quests</a></li>
+            <li><a href="challenges.html">Challenges</a></li>
+            <li><a href="rewards.html">Rewards</a></li>
+            <li><a href="#community">Community</a></li>
+            <li><a href="#signup" class="btn">Sign Up</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="points-container">
+    <p>Total Points: <span id="points">0</span></p>
+</div>
+    <section class="workout-section">
+        <h1>Intermediate Chest Workout Plan</h1>
+        <p>Choose one exercise to follow by clicking to start your progress.</p>
+
+        <div class="exercise">
+            <a href="chest-intermediate1.html"><img class="gif" src="benchpress.gif" alt="Push-Up"></a>
+            <p class="exercise-label">Bench press</p>
+            <p class="exercise-description">The bench press is a strength exercise that targets the chest, shoulders, and triceps by pressing a weight upward while lying on a bench. (30pts after turn in)</p>
+        </div>
+        
+        <div class="exercise">
+            <a href="chest-intermediate2.html"><img class="gif" src="bardip.gif" alt="Inclined Push-Up"></a>
+            <p class="exercise-label">Straight Bar Dips</p>
+            <p class="exercise-description">Straight bar dips are an advanced bodyweight exercise that targets the chest, triceps, and shoulders by dipping down and pushing up on a horizontal bar.(25pts after turn in)</p>
+        </div>
+        
+        <div class="exercise">
+            <a href="chest-intermediate3.html"><img class="gif" src="boxdip.gif " alt="Declined Push-Up"></a></a>
+            <p class="exercise-label">Box Dips</p>
+            <p class="exercise-description">Box dips are a bodyweight exercise that targets the triceps, shoulders, and chest by dipping down and pushing up using a sturdy box or bench. (25 pts after turn in)</p>
+        </div>
+        
+    </section>
+    <script>
+        
+        let points = parseInt(localStorage.getItem("points")) || 0; // Load saved points
+    const pointsDisplay = document.getElementById("points");
+
+    pointsDisplay.textContent = points; // Update points display
+    // Function to update points and store them in localStorage
+function gainPoints(amount) {
+    points += amount;
+    localStorage.setItem("points", points); // Save updated points
+    document.getElementById("points").textContent = points;
+
+    checkRewards(points); // Check for badge rewards when points change
+}
+
+function checkRewards(points) {
+    if (points >= 50 && points < 100) {
+        alert("🎉 Congratulations! You've unlocked the Bronze Badge!");
+        document.getElementById("reward-message").textContent = "🏅 Bronze Badge Unlocked!";
+    } else if (points >= 100 && points < 200) {
+        alert("🏆 Amazing! You've earned the Silver Badge!");
+        document.getElementById("reward-message").textContent = "🥈 Silver Badge Unlocked!";
+    } else if (points >= 200) {
+        alert("🥇 Incredible! You've achieved the Gold Badge!");
+        document.getElementById("reward-message").textContent = "🥇 Gold Badge Unlocked!";
+    }
+}
+
+        </script>
+        <div id="reward-message"></div>
+    <footer>
+        <p>&copy; 2025 FitQuest. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
